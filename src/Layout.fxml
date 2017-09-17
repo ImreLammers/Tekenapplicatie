@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+    <children>
+        <Canvas fx:id="drawingCanvas" height="341.0" layoutY="59.0" width="600.0" />
+        <ComboBox fx:id="cbType" editable="true" layoutX="20.0" layoutY="22.0" prefWidth="150.0" promptText="Drawable" />
+        <ColorPicker fx:id="cpColor" editable="true" layoutX="175.0" layoutY="22.0" prefWidth="150.0" promptText="Drawable" />
+        <Button fx:id="btnPlace" layoutX="20.0" onAction="#drawItem" layoutY="375.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="85.0" text="Draw" />
+        <ListView fx:id="lView" layoutX="610.0" layoutY="66.0" prefHeight="301.0" prefWidth="526.0" />
+        <Button fx:id="btnRemove" layoutX="120.0" onAction="#removeItem" layoutY="375.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="85.0" text="Delete" />
+        <Button fx:id="btnSaveLocal" layoutX="220.0" onAction="#saveDrawingLocal" layoutY="375.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="85.0" text="Save Local" />
+        <Button fx:id="btnSaveDB" layoutX="320.0" onAction="#saveDrawingDB" layoutY="375.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="185.0" text="Save to Database" />
+    </children>
+</AnchorPane>
