@@ -64,7 +64,10 @@ public class Controller implements Initializable {
             drawing.addItem(paintedText);
         }
         if(cbType.getSelectionModel().getSelectedItem().toString() == "Image"){
-            drawing.addItem(new Image(new File("/Users/imrel/Documents/JCCTekeningen/test.gif"), new Point(50.0, 10.0), 300, 300));
+            drawing.addItem(new Image(new File("C:\\Users\\Imre\\Pictures\\Pengu.jpg"), new Point(50.0, 10.0), 300, 300));
+        }
+        if(cbType.getSelectionModel().getSelectedItem().toString() == "Drawing"){
+            //drawing.addItem(drawing.items);
         }
         draw();
     }
@@ -93,7 +96,7 @@ public class Controller implements Initializable {
         gc = drawingCanvas.getGraphicsContext2D();
         paintable = new JavaFXPaintable(gc);
         drawing = new Drawing();
-        cbType.getItems().addAll("Oval", "Polygon", "Text", "Image");
+        cbType.getItems().addAll("Oval", "Polygon", "Text", "Image", "Drawing");
         cbType.getSelectionModel().selectFirst();
     }
 }
